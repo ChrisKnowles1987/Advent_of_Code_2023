@@ -73,7 +73,7 @@ def mapIO_2(location, map):
     return location
     
             
-with open('test.txt') as file:
+with open('input.txt') as file:
     file = file.read()
     lines = file.split('\n')
     
@@ -118,11 +118,10 @@ def main_2():
     seed_start = seeds[0::2]
     seed_range = seeds[1::2] 
     seed_found = False
-    location = 0
+    location = 41222967
     old_location = 0
     while  seed_found == False:
         counter = len(map_list) -1
-        location += 1
         old_location = location
         # print(location)
         while counter >= 0:
@@ -138,9 +137,10 @@ def main_2():
             if seed_min <= new_location  < seed_max:
                 seed_found = True
                 return location
+            location += 1
    
 
-# print(main_2())
+print(main_2())
 # part1 = main(seeds)
 # print(f'part1: {min(part1)}')
 # print(f'Part2: {main_2()}')
