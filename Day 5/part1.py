@@ -118,7 +118,7 @@ def main_2():
     seed_start = seeds[0::2]
     seed_range = seeds[1::2] 
     seed_found = False
-    location = 41222967
+    location = 0
     old_location = 0
     while  seed_found == False:
         counter = len(map_list) -1
