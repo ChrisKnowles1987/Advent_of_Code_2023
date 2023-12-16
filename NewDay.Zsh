@@ -15,4 +15,21 @@ mkdir -p "$DIR_NAME"
 cd "$DIR_NAME"
 
 # Create the files
-touch input.txt test.txt instructions.txt part1.py part2.py
+touch input.txt test.txt instructions.txt
+
+# Create the .py file in the python directory with the specified template
+    cat > "python/${file_name}.py" << EOF
+with open('../input/${file_name}.txt', 'r') as file:
+    lines = file.readlines
+    
+def part1():
+    
+    return
+
+def part2():
+    
+    return
+
+print(f'part1: {part1()}')
+print(f'part2: {part2()}')
+EOF
