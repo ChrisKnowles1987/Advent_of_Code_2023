@@ -7,6 +7,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 DIR_NAME=$1
+file_name=$1  # Assign the directory name to file_name
 
 # Create a new directory
 mkdir -p "$DIR_NAME"
@@ -17,17 +18,17 @@ cd "$DIR_NAME"
 # Create the files
 touch input.txt test.txt instructions.txt
 
-# Create the .py file in the python directory with the specified template
-    cat > "python/${file_name}.py" << EOF
-with open('../input/${file_name}.txt', 'r') as file:
-    lines = file.readlines
+# Create the .py file with the specified template
+cat > "${file_name}.py" << EOF
+with open('input.txt', 'r') as file:
+    lines = file.readlines()
     
 def part1():
-    
+    # Your code for part 1
     return
 
 def part2():
-    
+    # Your code for part 2
     return
 
 print(f'part1: {part1()}')
